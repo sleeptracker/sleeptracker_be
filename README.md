@@ -1,5 +1,3 @@
-# sleeptracker_be
-
 # Sleeptracker BACK-END SERVER
 
 ## Server
