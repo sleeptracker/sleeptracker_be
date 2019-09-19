@@ -100,13 +100,16 @@ Example
 
 ##### 200 (OK)
 
-> If you successfully register a user the endpoint will return an HTTP response with a status code `200` and a body as below.
+> If you successfully register a user the endpoint will return an HTTP response
+ with a status code `200` and a body as below.
 
 ```
 {
     "error": false,
     "message": "Account successfully created.",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo2LCJ1c2VybmFtZSI6InRyZXZvciIsImlhdCI6MTU2MTQwMTU3MSwiZXhwIjoxNTYxNDg3OTcxfQ.oflH8T88CZhObzBj3oRCBkqKeau-8jLC9yeDO8JJZ94",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo2LCJ1c2VybmFt
+    ZSI6InRyZXZvciIsImlhdCI6MTU2MTQwMTU3MSwiZXhwIjoxNTYxNDg3OTcxfQ.oflH8T88C
+    ZhObzBj3oRCBkqKeau-8jLC9yeDO8JJZ94",
     "user": {
         "id": 6,
         "username": "trevor",
@@ -121,7 +124,9 @@ Example
 
 ##### 406 (Not Acceptable)
 
-> If you are missing a username, password, first name, last name, or email for registration, the endpoint will return an HTTP response with a status code `406` and a body as below.
+> If you are missing a username, password, first name, last name, or email for 
+registration, the endpoint will return an HTTP response with a status code `406`
+ and a body as below.
 
 ```
 {
@@ -133,7 +138,8 @@ Example
 
 ##### 409 (Conflict)
 
-> If the submitted username or email is a duplicate of what is already in the database, the endpoint will return an HTTP response with a status code `409` and a body as below.
+> If the submitted username or email is a duplicate of what is already in the database,
+ the endpoint will return an HTTP response with a status code `409` and a body as below.
 
 ```
 {
@@ -146,7 +152,8 @@ Example
 
 ##### 404 (Bad Request)
 
-> If you send in invalid fields, the endpoint will return an HTTP response with a status code `404` and a body as below.
+> If you send in invalid fields, the endpoint will return an HTTP response with
+ a status code `404` and a body as below.
 
 ```
 {
@@ -158,7 +165,8 @@ Example
 
 ##### 500 (Internal Server Error)
 
-> If there is a server or database error, the endpoint will return an HTTP response with a status code `500` and a body as below.
+> If there is a server or database error, the endpoint will return an HTTP
+ response with a status code `500` and a body as below.
 
 ```
 {
@@ -183,10 +191,11 @@ _HTTP method:_ **[POST]**
 
 #### Body
 
-| name       | type   | required | description                                                           |
-| ---------- | ------ | -------- | --------------------------------------------------------------------- |
-| `username` | String | Yes      | Must match a username in the database                                 |
-| `password` | String | Yes      | Must match a password in the database corresponding to above username |
+| name       | type   | required | description                                                 |
+| ---------- | ------ | -------- | ------------------------------------------------------------|
+| `username` | String | Yes      | Must match a username in the database                       |
+| `password` | String | Yes      | Must match a password in the database corresponding
+                                 | to above username |
 
 _example:_
 
@@ -201,13 +210,16 @@ _example:_
 
 ##### 200 (OK)
 
-> If you successfully login, the endpoint will return an HTTP response with a status code `200` and a body as below.
+> If you successfully login, the endpoint will return an HTTP response with a status
+ code `200` and a body as below.
 
 ```
 {
     "error": false,
     "message": "Login successful.",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo2LCJ1c2VybmFtZSI6InRyZXZvciIsImlhdCI6MTU2MTQwMjMxNSwiZXhwIjoxNTYxNDg4NzE1fQ.XNIVmIStN8XT7vxuXz-E0Z0b8-J3tsm1KktDFR2VR8Q",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo2LCJ1c2Vybm
+    FtZSI6InRyZXZvciIsImlhdCI6MTU2MTQwMjMxNSwiZXhwIjoxNTYxNDg4NzE1fQ.XNIVmIS
+    tN8XT7vxuXz-E0Z0b8-J3tsm1KktDFR2VR8Q",
     "user": {
         "id": 6,
         "username": "trevor",
@@ -222,7 +234,9 @@ _example:_
 
 ##### 406 (Not Acceptable)
 
-> If you are missing a username or password for login, the endpoint will return an HTTP response with a status code `406` and a body as below.
+> If you are missing a username or password for login,
+ the endpoint will return an HTTP response with a status code
+  `406` and a body as below.
 
 ```
 {
@@ -234,7 +248,9 @@ _example:_
 
 ##### 404 (Not Found)
 
-> If you send in an email address that does not match one in the database or the passwords do not match, the endpoint will return an HTTP response with a status code `404` and a body as below.
+> If you send in an email address that does not match one in the database
+ or the passwords do not match, the endpoint will return an HTTP response
+  with a status code `404` and a body as below.
 
 ```
 {
@@ -246,7 +262,8 @@ _example:_
 
 ##### 500 (Bad Request)
 
-> If you send in invalid fields, the endpoint will return an HTTP response with a status code `500` and a body as below.
+> If you send in invalid fields, the endpoint will return an
+ HTTP response with a status code `500` and a body as below.
 
 ```
 {
