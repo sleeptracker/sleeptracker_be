@@ -28,24 +28,24 @@ https://get-sleeptracker.herokuapp.com/
 ```
 
 | Table     | Method | Endpoint                          | Description                                                                                                       
--------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 | auth      | POST   | /api/auth/register                | Creates a new `user` profile using the information
 |           |        |                                   | sent inside the `body` of the request and returns a
 |           |        |                                   | message along with the new `user` and a JSON Web Token
 |           |        |                                   | in the `body` of the response.   |
--------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 | auth      | POST   | /api/auth/login                   | Uses the credentials sent inside the `body` to
 |           |        |                                   | authenticate the user. On successful login, returns
 |           |        |                                   | a message with the `user` profile and a JSON Web
 |           |        |                                   | Token token in the `body` of the response. |
--------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 | users     | GET    | /api/restricted/users             | Retrieves an array of `user` objects and returns a
 |           |        |                                   | message with the array in the `body` of the response. |
--------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 | users     | GET    | /api/restricted/users/:id         | Retrieves a single `user` object and returns a
 |           |        |                                   | message with the object inside the `body` of the 
 |           |        |                                   | response. |   
--------------------------------------------------------------------------------------------------------------------                                                         
+-----------------------------------------------------------------------------------------------------------------                                                         
 
 ```
 
@@ -63,23 +63,23 @@ https://get-sleeptracker.herokuapp.com/
 ```
 ## Register Your Account
 
-# URL: https://get-sleeptracker.herokuapp.com/api/auth/register
+URL: https://get-sleeptracker.herokuapp.com/api/auth/register
 
-# HTTP method: POST
+HTTP method: POST
 
 # Header
 ```
 | Name         | Type   | Required | Description
--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 | Content-Type | String | Yes      | application/json
--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 ```
 
 # Body
 ```
 | Name         | Type   | Required | Description
--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 | username     | String | Yes      | Must e unique
 | password     | String | Yes      | 
 | firstname    | String | Yes      | 
@@ -94,11 +94,11 @@ Example
   "lastName": "turner",
   "email": "trevor@gmail.com"
 }
--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
-#### Response
+## Response
 
-##### 200 (OK)
+## 200 (OK)
 
 > If you successfully register a user the endpoint will return an HTTP response
  with a status code `200` and a body as below.
@@ -175,13 +175,15 @@ registration, the endpoint will return an HTTP response with a status code `406`
   "message": "Error with your request."
 }
 ```
-## **LOGIN**
+```
 
-### **Logs a user in**
+## LOGIN
 
-_Method Url:_ `/api/auth/login`
+```
 
-_HTTP method:_ **[POST]**
+URL: https://get-sleeptracker.herokuapp.com/api/auth/Login
+
+HTTP method: POST
 
 #### Headers
 
@@ -197,7 +199,7 @@ _HTTP method:_ **[POST]**
 | `password` | String | Yes      | Must match a password in the database corresponding
                                  | to above username |
 
-_example:_
+Example:
 
 ```
 {
@@ -206,9 +208,9 @@ _example:_
 }
 ```
 
-#### Response
+## Response
 
-##### 200 (OK)
+## 200 (OK)
 
 > If you successfully login, the endpoint will return an HTTP response with a status
  code `200` and a body as below.
