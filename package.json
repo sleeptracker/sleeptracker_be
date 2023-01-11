@@ -23,7 +23,7 @@
     "email-validator": "^2.0.4",
     "helmet": "^3.18.0",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.17.6",
+    "knex": "^2.4.0",
     "sqlite3": "^4.0.9",
     "supertest": "^4.0.2"
   },
